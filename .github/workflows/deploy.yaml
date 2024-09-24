@@ -18,7 +18,7 @@ jobs:
         run: tar -czf "${GITHUB_SHA}".tar.gz --exclude=.git --exclude=*.env *
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact
         with:
           name: app-build
           path: ${{ github.sha }}.tar.gz
@@ -27,7 +27,7 @@ jobs:
     needs: create-deployment-artifact
     name: Prepare release on server
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact
         with:
           name: app-build
       - name: Upload artifact to server
