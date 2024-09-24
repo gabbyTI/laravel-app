@@ -2,7 +2,7 @@ server {
     listen 80;
     listen [::]:80;
     server_name 3.99.171.255;
-    root ~/laravel-app/current/public;
+    root /home/ubuntu/laravel-app/current/public;
 
     add_header X-Frame-Options "SAMEORIGIN";
     add_header X-Content-Type-Options "nosniff";
