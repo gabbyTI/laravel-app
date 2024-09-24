@@ -65,8 +65,8 @@ jobs:
           key: ${{ secrets.SERVER_PRIVATE_KEY }}
           envs: GITHUB_SHA
           script: |
-            sudo -S cp ${{ vars.APP_PATH }}/releases/${GITHUB_SHA}/nginx/api.chatbuddy.ng /etc/nginx/sites-available/
-            sudo -S ln -s -n -f /etc/nginx/sites-available/api.chatbuddy.ng /etc/nginx/sites-enabled/
+            sudo -S cp ${{ vars.APP_PATH }}/releases/${GITHUB_SHA}/nginx/laravel-app /etc/nginx/sites-available/
+            sudo -S ln -s -n -f /etc/nginx/sites-available/laravel-app /etc/nginx/sites-enabled/
   run-before-hooks:
     runs-on: ubuntu-latest
     needs:
