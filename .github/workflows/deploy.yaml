@@ -132,7 +132,6 @@ jobs:
         configure-nginx-on-server,
         run-before-hooks,
         activate-release,
-        run-app,
       ]
     name: Server Clean upp
     steps:
