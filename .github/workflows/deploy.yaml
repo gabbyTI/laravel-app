@@ -91,7 +91,6 @@ jobs:
           envs: GITHUB_SHA,RELEASE_PATH,ACTIVE_RELEASE_PATH,BASE_PATH
           script: |
             echo release folder: $RELEASE_PATH
-            sudo chown -R www-data:www-data $RELEASE_PATH
             sudo -S ln -s -n -f ${{ vars.DB_PATH }}/database.sqlite $RELEASE_PATH/database
             printf "%s" "${{ vars.ENV_FILE }}" > ${{ vars.APP_PATH }}/.env
             sudo -S ln -s -n -f ${{ vars.APP_PATH }}/.env $RELEASE_PATH
