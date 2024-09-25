@@ -143,5 +143,5 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_PRIVATE_KEY }}
           script: |
-            cd ${{ vars.APP_PATH }}/releases && ls -t -1 | tail -n +6 | xargs rm -rf;
-            cd ${{ vars.APP_PATH }}/artifacts && ls -t -1 | tail -n +6 | xargs rm -rf;
+            cd ${{ vars.APP_PATH }}/releases && ls -t -1 | tail -n +2 | xargs rm -rf;
+            cd ${{ vars.APP_PATH }}/artifacts && ls -t -1 | tail -n +2 | xargs rm -rf;
