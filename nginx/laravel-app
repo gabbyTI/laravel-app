@@ -1,7 +1,7 @@
 server {
-    listen 80;
-    listen [::]:80;
-    server_name 3.99.171.255;
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    server_name 15.222.60.107;
     root /home/ubuntu/laravel-app/current/public;
 
     add_header X-Frame-Options "SAMEORIGIN";
