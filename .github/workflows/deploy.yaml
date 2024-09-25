@@ -73,6 +73,7 @@ jobs:
       [
         create-deployment-artifact,
         prepare-release-on-server,
+        configure-nginx-on-server,
       ]
     name: The before hook
     steps:
